@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="glyph">
+<path id="Rectangle" d="M6 6H30C31.6569 6 33 7.34315 33 9V27C33 28.6569 31.6569 30 30 30H6C4.34315 30 3 28.6569 3 27V9C3 7.34315 4.34315 6 6 6Z" stroke-width="2" stroke="#A2A4A4"/>
+<path id="Vector" d="M5 25L13 16L19 22L24 17L31 25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#A2A4A4"/>
+<circle id="Ellipse" cx="11.5" cy="12.5" r="2.5" fill="#A2A4A4"/>
+</g>
+</svg>

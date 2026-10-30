@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<path id="Rectangle" d="M3 4.075H10C10.6213 4.075 11.125 4.57868 11.125 5.2V9.2C11.125 9.82132 10.6213 10.325 10 10.325H3C2.37868 10.325 1.875 9.82132 1.875 9.2V5.2C1.875 4.57868 2.37868 4.075 3 4.075Z" stroke-width="1.75" stroke="#00B5AD"/>
+<path id="Rectangle_2" d="M14 13.675H21C21.6213 13.675 22.125 14.1787 22.125 14.8V18.8C22.125 19.4213 21.6213 19.925 21 19.925H14C13.3787 19.925 12.875 19.4213 12.875 18.8V14.8C12.875 14.1787 13.3787 13.675 14 13.675Z" stroke-width="1.75" stroke="#00B5AD"/>
+<path id="Vector" d="M9.4 11.6L14.2 15.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke="#00B5AD"/>
+</g>
+</svg>

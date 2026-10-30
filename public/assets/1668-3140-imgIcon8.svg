@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<path id="Ellipse" d="M20.125 14C20.125 18.4873 16.4873 22.125 12 22.125C7.51269 22.125 3.875 18.4873 3.875 14C3.875 9.51269 7.51269 5.875 12 5.875C16.4873 5.875 20.125 9.51269 20.125 14Z" stroke-width="1.75" stroke="#00B5AD"/>
+<rect id="Rectangle" x="8.5" y="1.6" width="7" height="2.4" rx="1.2" fill="#00B5AD"/>
+<path id="Vector" d="M12 3.9V5.2" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke="#00B5AD"/>
+<path id="Vector_2" d="M12 9.8V14L15.4 16" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke="#00B5AD"/>
+</g>
+</svg>

@@ -85,7 +85,9 @@ function Reveal04TeamLeadership({ className, state = "End" }: Reveal04TeamLeader
               <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] min-w-full not-italic relative shrink-0 text-[#008682] text-[12px] text-center tracking-[1.68px] w-[min-content]" data-node-id="1871:2643">
                 CEO
               </p>
-              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2644">{`Andrew has spent nearly 20 years in digital media. With engineering and coding foundations, he's a serial entrepreneur, mobile ad tech pioneer, and was one of the first salespeople in programmatic demand. Andrew leads FeedTV on its mission to make CTV performance more transparent and effective.`}</p>
+              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2644">
+                Andrew has been in digital media for over a decade. He is a mobile ad tech pioneer, and started his career as one of the first salespeople in the industry’s programmatic demand side. Although he has a reputable career in sales, Andrew also has a technical foundation in engineering and coding. He is a serial entrepreneur, and enjoys problem solving through innovation; FeedTV is his second successful start-up. In his free time, Andrew loves exploring cities on any two-wheeler and, in fact, can be seen standing on a balancing board while working.
+              </p>
             </>
           )}
           {isStart && (
@@ -117,7 +119,9 @@ function Reveal04TeamLeadership({ className, state = "End" }: Reveal04TeamLeader
               <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] min-w-full not-italic relative shrink-0 text-[#008682] text-[12px] text-center tracking-[1.68px] w-[min-content]" data-node-id="1871:2648">
                 COO
               </p>
-              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2649">{`Sarah started her career at mobile's first demand-side platform, becoming a multi-vertical and network expert who closed $2M+ in monthly revenue. With 15 years of performance marketing expertise, she has helped scale FeedTV's growth, partnerships, and operations.`}</p>
+              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2649">
+                Sarah started her career in mobile performance during its infancy, working for the industry’s first demand-side platform. Her clients were predominantly made up of top-grossing mobile gaming apps. Sarah ultimately became a multi-vertical and network expert, closing over $2 million a month in revenue. Her reputation has led to partnerships with leading brands and has made her one of the youngest C-level executives in mobile. She’s a proud #womenintech member, and loves traveling, playing music and hanging with her dog Zoey.
+              </p>
             </>
           )}
           {isStart && (
@@ -149,7 +153,9 @@ function Reveal04TeamLeadership({ className, state = "End" }: Reveal04TeamLeader
               <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] min-w-full not-italic relative shrink-0 text-[#008682] text-[12px] text-center tracking-[1.68px] w-[min-content]" data-node-id="1871:2653">
                 CTO
               </p>
-              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2654">{`Ken has over 20 years of engineering expertise. A longtime builder and hackathon enthusiast, Ken has led teams at start-ups and enterprises like Bloomberg and Citigroup. He leads FeedTV's AI and technology strategy, as well as the engineering behind its CTV performance solutions.`}</p>
+              <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[15.5px] text-center w-[min-content]" data-node-id="1871:2654">
+                Ken has been coding since middle school and has been a professional engineer for over a decade. In his earlier career, Ken won numerous hackathons, eventually co-creating his own while in his 20s. He has led development teams for multiple start-ups and enterprise-level companies such as Bloomberg and Citigroup. Ken is a lifelong student who constantly seeks new skills and knowledge. He is a proud immigrant, avid book reader and can be found meditating in his spare time.
+              </p>
             </>
           )}
           {isStart && (

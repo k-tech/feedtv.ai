@@ -259,19 +259,19 @@ type Reveal02OemHowFeedTvWorksProps = {
 function Reveal02OemHowFeedTvWorks({ className, state = "End" }: Reveal02OemHowFeedTvWorksProps) {
   const isStart = state === "Start";
   return (
-    <div className={className || `h-[568px] relative w-[1440px] ${isStart ? "bg-[rgba(255,255,255,0.01)]" : ""}`} id={isStart ? "node-1871_2103" : "node-1871_2102"}>
-      <div className={`-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 overflow-clip top-[100px] w-[588px] ${isStart ? "" : ""}`} id={isStart ? "node-1871_2095" : "node-1871_2087"} data-name="Head">
-        <p className="[word-break:break-word] font-['Lato:Bold'] leading-[1.27] not-italic relative shrink-0 text-[#1d262f] text-[40px] text-center tracking-[-0.96px] w-full" id={isStart ? "node-1871_2096" : "node-1871_2088"}>
+    <section className={`oem-features ${className || ""}`} id={isStart ? "node-1871_2103" : "node-1871_2102"}>
+      <header className="oem-features-heading" data-name="Head">
+        <h2>
           Four Things That Make It Work
-        </p>
+        </h2>
+      </header>
+      <div className="oem-features-grid" data-name="Row">
+        <HoverLift01DirectRelationships className="oem-feature" />
+        <HoverLift02FirstLookAlways className="oem-feature" />
+        <HoverLift03CompleteTransparency className="oem-feature" />
+        <HoverLift04CtvNativeMeasurement className="oem-feature" />
       </div>
-      <div className={`-translate-x-1/2 absolute h-[326px] left-1/2 overflow-clip top-[178px] w-[1320px] ${isStart ? "" : ""}`} id={isStart ? "node-1871_2097" : "node-1871_2089"} data-name="Row">
-        <HoverLift01DirectRelationships className="absolute h-[304.5px] left-[-7.82px] top-[-7.25px] w-[328.65px]" />
-        <HoverLift02FirstLookAlways className="absolute h-[304.5px] left-[327.17px] top-[-7.25px] w-[328.65px]" />
-        <HoverLift03CompleteTransparency className="absolute h-[304.5px] left-[662.17px] top-[-7.25px] w-[328.65px]" />
-        <HoverLift04CtvNativeMeasurement className="absolute h-[304.5px] left-[997.17px] top-[-7.25px] w-[328.65px]" />
-      </div>
-    </div>
+    </section>
   );
 }
 

@@ -24,14 +24,19 @@ type CmsCard = {
 type CmsEmbed = {title: string; html: string};
 
 const recency = (a: CmsCard) => a.date || a.updatedAt || '';
+// Give up on a slow CMS and fall back to the built-in content.
+const TIMEOUT_MS = 8000;
 
-let listRequest: Promise<CmsCard[]> | undefined;
-/** Published CMS articles, newest first (fetched once per page load). */
-function cmsList(): Promise<CmsCard[]> {
-  listRequest ??= fetch(cmsUrl() + '/api/articles')
-    .then(r => (r.ok ? r.json() : {articles: []}))
+let listRequest: Promise<CmsCard[] | null> | undefined;
+/** Published CMS articles, newest first; null if the CMS can't be reached (retried on the next call). */
+function cmsList(): Promise<CmsCard[] | null> {
+  listRequest ??= fetch(cmsUrl() + '/api/articles', {signal: AbortSignal.timeout(TIMEOUT_MS)})
+    .then(r => (r.ok ? r.json() : Promise.reject(new Error('AI CMS ' + r.status))))
     .then(d => ((d.articles || []) as CmsCard[]).filter(a => a.status === 'published').sort((x, y) => recency(y).localeCompare(recency(x))))
-    .catch(() => []);
+    .catch(() => {
+      listRequest = undefined;
+      return null;
+    });
   return listRequest;
 }
 
@@ -49,7 +54,7 @@ export function CmsArticle({slug, fallback, footer}: {slug: string; fallback: Re
   useEffect(() => {
     let alive = true;
     ensureStylesheet();
-    fetch(`${cmsUrl()}/api/articles/${encodeURIComponent(slug)}/embed?back=/blog`)
+    fetch(`${cmsUrl()}/api/articles/${encodeURIComponent(slug)}/embed?back=/blog`, {signal: AbortSignal.timeout(TIMEOUT_MS)})
       .then(r => (r.ok ? r.json() : null))
       .then((d: CmsEmbed | null) => alive && setState(d && d.html ? d : 'missing'))
       .catch(() => alive && setState('missing'));
@@ -71,10 +76,13 @@ export function CmsArticle({slug, fallback, footer}: {slug: string; fallback: Re
   );
 }
 
-/** On /blog, point the design's article cards at the latest CMS articles; cards beyond the CMS list are hidden. */
+/**
+ * On /blog, point the design's article cards at the latest CMS articles; cards beyond the CMS list are hidden.
+ * If the CMS can't be reached, the design's cards stay as they are.
+ */
 export function wireCmsBlogCards(root: HTMLElement) {
   cmsList().then(list => {
-    if (!list.length || !root.isConnected) return;
+    if (!list || !root.isConnected) return;
     root.querySelectorAll<HTMLAnchorElement>('a[data-name^="Article ·"]').forEach((card, i) => {
       const a = list[i];
       if (!a) {

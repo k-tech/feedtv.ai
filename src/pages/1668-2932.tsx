@@ -390,30 +390,15 @@ function Reveal02OemSupplyPath({ className, state = "End" }: Reveal02OemSupplyPa
 export default function Component02FeedTvHome() {
   return (
     <div className="bg-white content-stretch flex flex-col items-start pt-[88px] relative size-full" data-node-id="1668:2932" data-name="02 · FeedTV Home">
-      <div className="h-[574px] relative shrink-0 w-full" data-node-id="1668:2933" data-name="Hero">
-        <div className="absolute h-[402px] left-[120px] overflow-clip top-[88px] w-[1200px]" data-node-id="1668:2934" data-name="Row">
-          <div className="absolute h-[402px] left-0 overflow-clip top-0 w-[556px]" data-node-id="1668:2935" data-name="Copy">
-            <p className="[word-break:break-word] absolute font-['Lato:Bold'] leading-[normal] left-0 not-italic text-[#00b5ad] text-[12px] top-0 tracking-[1.92px] whitespace-nowrap" data-node-id="1668:2936">
-              FEEDTV HOME
-            </p>
-            <h1 className="[word-break:break-word] absolute font-['Lato:Bold'] leading-[1.27] left-0 not-italic text-[#1d262f] text-[50px] top-[34px] tracking-[-1.4px] w-[556px]" data-node-id="1668:2937">
-              Get Your Ads on the Biggest Screen in Every Home in America
-            </h1>
-            <p className="[word-break:break-word] absolute font-['Lato:Light'] leading-[1.68] left-0 not-italic text-[#4c5864] text-[18px] top-[213px] w-[556px]" data-node-id="1668:2938">
-              FeedTV Home gives you direct relationships with the OEMs that make the screen. No exchanges, no waterfall, no guessing what you bought — home-screen placements negotiated straight with Samsung, LG, Vizio and TCL all under one media plan.
-            </p>
-            <a className="absolute bg-[#00b5ad] block cursor-pointer h-[49px] left-0 overflow-clip rounded-[999px] top-[353px] w-[206px]" data-node-id="1668:2939" data-name="Button · See a Live Placement">
-              <p className="[word-break:break-word] absolute font-['Lato:Bold'] leading-[normal] left-[30px] not-italic text-[15.5px] text-left text-white top-[15px] whitespace-nowrap" data-node-id="1668:2940">
-                See a Live Placement
-              </p>
-            </a>
-          </div>
+      <section className="product-hero" data-name="Product hero">
+        <div className="product-hero-copy">
+          <p className="eyebrow">FEEDTV HOME</p>
+          <h1>Get Your Ads on the Biggest Screen in Every Home in America</h1>
+          <p>FeedTV Home gives you direct relationships with the OEMs that make the screen. No exchanges, no waterfall, no guessing what you bought — home-screen placements negotiated straight with Samsung, LG, Vizio and TCL all under one media plan.</p>
+          <a className="button" href="/preview-your-ads">See a Live Placement</a>
         </div>
-        <div className="absolute h-[262px] left-[729px] rounded-tl-[76px] top-[51px] w-[379px]" data-node-id="1668:2941" style={{ backgroundImage: "linear-gradient(145.3441709509324deg, rgb(0, 134, 130) 14.644%, rgb(0, 181, 173) 85.356%)" }} />
-        <div className="absolute h-[410px] left-[766px] rounded-[37px] top-[88px] w-[614px]" data-node-id="1668:2942" data-name="img/feedtv-home-hero">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[37px] size-full" src={imgImgFeedtvHomeHero} />
-        </div>
-      </div>
+        <div className="product-hero-visual"><img src={imgImgFeedtvHomeHero} alt="The complete FeedTV Home television advertising placement" /></div>
+      </section>
       <Reveal02OemSupplyPath className="content-stretch flex flex-col gap-[32px] items-start px-[120px] py-[100px] relative shrink-0 w-full" state="End" />
       <Reveal02OemHowFeedTvWorks className="bg-[rgba(255,255,255,0.01)] h-[568px] relative shrink-0 w-full" state="End" />
       <div className="bg-[#fafbfb] content-stretch flex flex-col gap-[32px] items-start px-[120px] py-[100px] relative shrink-0 w-full" data-node-id="1871:2310" data-name="OEM Partners">

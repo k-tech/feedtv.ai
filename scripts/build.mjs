@@ -9,6 +9,7 @@ const sources=await Promise.all(pages.map(f=>fs.readFile(root+'/src/pages/'+f,'u
 const {css,unknown}=designStyles(sources);
 await fs.writeFile(root+'/dist/design.css',css);
 await fs.copyFile(root+'/src/style.css',root+'/dist/style.css');
+await fs.copyFile(root+'/src/responsive.css',root+'/dist/responsive.css');
 await fs.copyFile(root+'/src/index.html',root+'/dist/index.html');
 await build({entryPoints:[root+'/src/app.tsx'],bundle:true,minify:true,format:'esm',jsx:'automatic',outfile:root+'/dist/app.js',define:{'process.env.NODE_ENV':'"production"'},logLevel:'info'});
 await fs.writeFile(root+'/dist/_redirects','/* /index.html 200\n');

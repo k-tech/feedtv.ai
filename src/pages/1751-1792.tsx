@@ -463,33 +463,14 @@ function RevealClientLogos({ className, step = true }: RevealClientLogosProps) {
 export default function Component01HomepageV2() {
   return (
     <div className="bg-white content-stretch flex flex-col items-start pt-[88px] relative size-full" data-node-id="1751:1792" data-name="01 · Homepage v2">
-      <div className="h-[719px] relative shrink-0 w-full" data-node-id="I1751:1792;1751:1090" data-name="Hero">
-        <div className="absolute h-[807px] left-[-110px] overflow-clip top-[-88px] w-[1661px]" data-node-id="I1751:1792;1829:3263" data-name="Slot">
-          <div className="absolute bottom-[-12px] h-[855px] left-[95px] w-[1472px]" data-node-id="I1751:1792;1829:3263;1829:3269" data-name="image 1 · hero (full bleed under nav)">
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <img alt="" className="absolute h-[99.97%] left-[-1.24%] max-w-none top-[0.11%] w-full" src={imgImage1HeroFullBleedUnderNav} />
-            </div>
-          </div>
+      <section className="home-hero" data-name="Homepage hero">
+        <img className="home-hero-scene" src={imgImage1HeroFullBleedUnderNav} alt="Connected TV advertising in a living room, with a couple on the sofa and a complete television screen" />
+        <div className="home-hero-copy">
+          <h1><span>Premium Ads</span><span>You Can Actually See</span></h1>
+          <p>FeedTV is the CTV platform built for incremental user growth on the biggest screen in the home—delivering exclusive placements, high-visibility ads, and measurable results.</p>
+          <a className="button" href="/contact">Get Your Media Plan</a>
         </div>
-        <div className="absolute h-[340px] left-[120px] overflow-clip top-[88px] w-[540px]" data-node-id="I1751:1792;1751:1092" data-name="Hero row">
-          <div className="absolute content-stretch flex flex-col gap-[20px] items-start left-0 overflow-clip top-0 w-[540px]" data-node-id="I1751:1792;1751:1093" data-name="Copy">
-            <h1 className="[word-break:break-word] font-['Lato:Bold'] leading-[0] min-w-full not-italic relative shrink-0 text-[#1d262f] text-[58px] tracking-[-1.624px] w-[min-content]" data-node-id="I1751:1792;1751:1094">
-              <span className="block leading-[1.27] mb-0">Premium Ads</span>
-              <span className="block leading-[1.27]">You Can Actually See</span>
-            </h1>
-            <p className="[word-break:break-word] font-['Lato:Regular'] leading-[1.65] not-italic relative shrink-0 text-[#4c5864] text-[19px] w-[528px]" data-node-id="I1751:1792;1751:1095">
-              FeedTV is the CTV platform built for incremental user growth on the biggest screen in the home—delivering exclusive placements, high-visibility ads, and measurable results.
-            </p>
-            <div className="content-stretch flex items-start overflow-clip relative shrink-0" data-node-id="I1751:1792;1751:1096" data-name="CTAs">
-              <a className="bg-[#00b5ad] content-stretch cursor-pointer flex items-center overflow-clip px-[30px] py-[15px] relative rounded-[999px] shrink-0" data-node-id="I1751:1792;1751:1097" data-name="Button · Book a Meeting">
-                <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] not-italic relative shrink-0 text-[15.5px] text-left text-white whitespace-nowrap" data-node-id="I1751:1792;1751:1098">
-                  Get Your Media Plan
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
       <div className="bg-[#f2f2f2] content-stretch flex flex-col gap-[30px] h-[526px] items-start pb-[66px] pt-[28px] px-[120px] relative shrink-0 w-full" data-node-id="I1751:1792;1751:1099" data-name="Trusted by">
         <p className="[word-break:break-word] font-['Lato:ExtraBold'] leading-[normal] min-w-full not-italic relative shrink-0 text-[#a2a4a4] text-[16px] text-center tracking-[2.56px] w-[min-content]" data-node-id="I1751:1792;1751:1100">
           TRUSTED BY THE WORLD’S TOP APPS

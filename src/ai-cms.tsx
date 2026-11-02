@@ -96,7 +96,7 @@ function articleHref(article: CmsArticleRecord): string {
 }
 
 function displayDate(article: CmsArticleRecord): string {
-  const value = article.publishedAt || article.date || article.updatedAt;
+  const value = article.date || article.publishedAt || article.updatedAt;
   if (!value) return '';
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) return '';
@@ -122,7 +122,6 @@ export function CmsListing({type, title, description}: {type?: CmsArticleType; t
   const [page, setPage] = useState(1);
   const [refresh, setRefresh] = useState(0);
   const [result, setResult] = useState<{status: 'loading' | 'ready' | 'error'; articles: CmsArticleRecord[]}>({status: 'loading', articles: []});
-  const controllerRef = useRef<AbortController>();
   const requestId = useRef(0);
 
   useEffect(() => {
@@ -132,7 +131,6 @@ export function CmsListing({type, title, description}: {type?: CmsArticleType; t
 
   useEffect(() => {
     const controller = new AbortController();
-    controllerRef.current = controller;
     const id = ++requestId.current;
     let active = true;
     setResult({status: 'loading', articles: []});
@@ -154,36 +152,35 @@ export function CmsListing({type, title, description}: {type?: CmsArticleType; t
   const visible = filtered.slice((currentPage - 1) * CMS_PAGE_SIZE, currentPage * CMS_PAGE_SIZE);
 
   const changeQuery = (value: string) => {
-    controllerRef.current?.abort();
-    requestId.current++;
     setQuery(value);
     setCategory('');
     setPage(1);
-    setResult({status: 'loading', articles: []});
   };
-  const back = type === 'case-study' ? '/case-studies' : type === 'ftv-101' ? '/ftv-101' : type === 'blog' ? '/blog' : '/resources';
-
-  if (result.status === 'loading') return <><section className="ai-cms-message" aria-live="polite" aria-busy="true"><span className="eyebrow">FEEDTV RESOURCES</span><h1>Loading published content…</h1><p>Connecting to the FeedTV AI CMS.</p></section><Footer/></>;
-  if (result.status === 'error') return <CmsState kind="error" back={back} retry={() => setRefresh(value => value + 1)} footer={<Footer/>}/>;
 
   return <div className="ai-cms-page">
     <header className="ai-cms-listing-header"><span className="eyebrow">FEEDTV RESOURCES</span><h1>{title}</h1><p>{description}</p>
       <label className="ai-cms-search"><span className="sr-only">Search {title}</span><input type="search" value={query} onChange={event => changeQuery(event.target.value)} placeholder="Search articles…"/><span aria-hidden="true">⌕</span></label>
     </header>
     <section className="ai-cms-results" aria-label={title}>
+      {result.status !== 'ready' ? <div className="ai-cms-empty" role="status" aria-busy={result.status === 'loading'}>
+        <h2>{result.status === 'loading' ? 'Loading published content…' : 'We couldn’t load these articles.'}</h2>
+        <p>{result.status === 'loading' ? 'Connecting to the FeedTV AI CMS.' : 'Please check your connection and try again.'}</p>
+        {result.status === 'error' && <button className="button" onClick={() => setRefresh(value => value + 1)}>Try again</button>}
+      </div> : <>
       <div className="ai-cms-toolbar"><p aria-live="polite">{filtered.length} {filtered.length === 1 ? 'article' : 'articles'}</p>
         <div className="ai-cms-filters">
-          {categories.length > 0 && <label>Category <select value={category} onChange={event => {setCategory(event.target.value); setPage(1);}}><option value="">All categories</option>{categories.map(item => <option key={item} value={item}>{item}</option>)}</select></label>}
+          {categories.length > 0 && <label>Category <select aria-label="Category" value={category} onChange={event => {setCategory(event.target.value); setPage(1);}}><option value="">All categories</option>{categories.map(item => <option key={item} value={item}>{item}</option>)}</select></label>}
           <button className="ai-cms-refresh" onClick={() => setRefresh(value => value + 1)}>Refresh articles</button>
         </div>
       </div>
       {filtered.length === 0
-        ? <div className="ai-cms-empty" role="status"><h2>{result.articles.length === 0 ? 'No published articles yet.' : 'No articles in this category.'}</h2><p>{query ? 'Try another search, or clear the search to browse all published content.' : 'New published content will appear here.'}</p>{(query || category) && <button className="back-link" onClick={() => {changeQuery(''); setCategory('');}}>Clear filters</button>}</div>
+        ? <div className="ai-cms-empty" role="status"><h2>{query.trim() ? 'No matching articles.' : result.articles.length === 0 ? 'No published articles yet.' : 'No articles in this category.'}</h2><p>{query ? 'Try another search, or clear the search to browse all published content.' : 'New published content will appear here.'}</p>{(query || category) && <button className="back-link" onClick={() => {changeQuery(''); setCategory('');}}>Clear filters</button>}</div>
         : <div className="ai-cms-grid">{visible.map(article => <a className="ai-cms-card" href={articleHref(article)} key={`${article.type}:${article.slug}`}>
           <div className="ai-cms-card-cover">{article.cover?.url ? <img src={article.cover.url} alt={article.cover.alt || ''} loading="lazy"/> : <span aria-hidden="true">FEEDTV</span>}</div>
           <div className="ai-cms-card-copy"><div className="ai-cms-card-meta">{article.category && <span className="ai-cms-category">{article.category}</span>}{displayDate(article) && <time>{displayDate(article)}</time>}</div><h2>{article.title}</h2>{article.dek && <p>{article.dek}</p>}<span className="ai-cms-read">Read article <span aria-hidden="true">↗</span></span></div>
         </a>)}</div>}
       {filtered.length > 0 && pageCount > 1 && <nav className="ai-cms-pagination" aria-label="Article pages"><button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>← Previous</button><span>Page {currentPage} of {pageCount}</span><button disabled={currentPage === pageCount} onClick={() => setPage(currentPage + 1)}>Next →</button></nav>}
+      </>}
     </section>
     <Footer/>
   </div>;

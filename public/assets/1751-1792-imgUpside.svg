@@ -1,5 +1,5 @@
 <svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Upside" opacity="0" filter="url(#filter0_f_0_1281)">
+<g id="Upside" opacity="0" filter="url(#filter0_f_0_1317)">
 <path d="M107.42 1.6144V9.71868C106.361 8.63596 105.188 8.01388 103.705 7.81369C99.9701 7.30569 96.4873 9.36567 95.3593 12.9948C94.6985 15.1215 94.776 17.3602 95.5186 19.446C96.5841 22.4337 99.3544 24.1557 102.596 23.9663C104.673 23.8458 106.348 23.1031 107.624 21.4306L107.633 23.7747L111.712 23.7381V1.63592L107.42 1.6144ZM103.386 20.1262C101.027 20.1262 99.1133 18.2147 99.1133 15.8577C99.1133 13.5007 101.027 11.5871 103.386 11.5871C105.745 11.5871 107.661 13.4985 107.661 15.8577C107.661 18.2169 105.747 20.1262 103.386 20.1262Z" fill="#424242"/>
 <path d="M71.9893 12.5019C71.0185 9.46899 68.3171 7.66086 65.1356 7.73835C63.0046 7.79001 61.1082 8.56493 59.8382 10.3085L59.7952 7.93639L55.7291 7.97944V28.6158L60.0384 28.5942L60.0191 22.001C61.1298 23.1354 62.318 23.7166 63.8118 23.9125C67.7423 24.4291 71.3026 22.0656 72.2196 18.1932C72.6716 16.2904 72.5812 14.3552 71.9893 12.5019ZM64.0637 20.124C61.7066 20.124 59.793 18.2126 59.793 15.8577C59.793 13.5028 61.7066 11.5892 64.0637 11.5892C66.4207 11.5892 68.3364 13.5007 68.3364 15.8577C68.3364 18.2147 66.4228 20.124 64.0637 20.124Z" fill="#424242"/>
 <path d="M92.9657 23.7704H88.6585L88.6542 7.95145L92.9636 7.9493L92.9657 23.7704Z" fill="#424242"/>
@@ -11,10 +11,10 @@
 <path d="M28.7707 0.0473557L14.1938 14.5726L14.0905 0L28.7707 0.0473557Z" fill="#424242"/>
 </g>
 <defs>
-<filter id="filter0_f_0_1281" x="inf" y="inf" width="-inf" height="-inf" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_0_1317" x="inf" y="inf" width="-inf" height="-inf" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="7" result="effect1_foregroundBlur_0_1281"/>
+<feGaussianBlur stdDeviation="7" result="effect1_foregroundBlur_0_1317"/>
 </filter>
 </defs>
 </svg>

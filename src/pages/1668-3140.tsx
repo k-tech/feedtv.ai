@@ -157,7 +157,7 @@ function HoverLift03OutcomeBasedBuying({ className, state = "Default" }: HoverLi
           Outcome-based buying
         </p>
         <p className={`[word-break:break-word] font-["Lato:Light"] not-italic relative shrink-0 text-[#4c5864] w-full ${isHover ? "leading-[26.25px] text-[16.275px]" : "leading-[25px] text-[15.5px]"}`} id={isHover ? "node-1930_2341" : "node-1925_3508"}>
-          We buy to installs, in-app events, and incremental reach — priced against results, not raw impressions.
+          We buy to mobile web conversions, installs, in-app events, and incremental reach — priced against results, not raw impressions.
         </p>
       </div>
     </div>
@@ -263,7 +263,7 @@ export default function Component03FeedTvStream() {
               <span className="block leading-[1.27]">User Acquisition</span>
             </h1>
             <p className="[word-break:break-word] font-['Lato:Light'] leading-[1.68] min-w-full not-italic relative shrink-0 text-[#4c5864] text-[18px] w-[min-content]" data-node-id="1668:3146">
-              Our own machine-learning algorithm makes a bid decision on every impression in real time — optimizing toward the install, event, or ROAS target you already hold your mobile channels to.
+              Our own machine-learning algorithm makes a bid decision on every impression in real time — optimizing toward the mobile web conversion, install, event, or ROAS target you already hold your mobile channels to.
             </p>
             <a className="bg-[#00b5ad] content-stretch cursor-pointer flex items-center overflow-clip px-[30px] py-[15px] relative rounded-[999px] shrink-0" data-node-id="1668:3147" data-name="Button · Get In Touch">
               <p className="[word-break:break-word] font-['Lato:Bold'] leading-[normal] not-italic relative shrink-0 text-[15.5px] text-left text-white whitespace-nowrap" data-node-id="1668:3148">

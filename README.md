@@ -1,6 +1,6 @@
 # FeedTV website
 
-Website built from the approved **FeedTV — Website v3 (Web)** Figma canvas. Includes the ten main desktop pages, the case-study detail example, and article routes using the supplied Google Docs material.
+Website updated to the **FeedTV — Website v5 (Web)** Figma canvas. Includes the ten main desktop pages, the case-study detail example, and article routes using the supplied Google Docs material.
 
 ## Run
 
@@ -32,11 +32,11 @@ Set `window.FEEDTV_CONTACT_ENDPOINT` in `public/config.js` to an HTTPS endpoint 
 
 The advertising preview email gate validates an address and unlocks the sample for the browser session. It does not transmit or permanently store the address. The externally hosted CTV previewer is linked from the original design; its behavior is owned by that application. A production email capture endpoint still needs to be supplied.
 
-Legal links show a launch-pending notice because approved legal copy was not supplied. The testimonial carousel follows the three states supplied in the Figma design. The CTA palette follows Figma; its documented contrast decision remains an item for production design review.
+Legal links show a launch-pending notice because approved legal copy was not supplied. The testimonial carousel follows the three v5 design states, including Pau Sicilia's approved quote, photo, and gold Binance logo. All slides share the tallest slide's height to prevent layout jumps. States 2 and 3 remain design placeholders; set `window.FEEDTV_SHOW_TESTIMONIALS = false` in `public/config.js` for launch until all three testimonials are approved, as noted in the v5 handoff. The CTA palette follows Figma; its documented contrast decision remains an item for production design review.
 
 ## References
 
-- Figma: https://www.figma.com/design/54rS3BoUlrxrw74QZ85XGa/FeedTV-Homepage--Prototype-?node-id=1668-2565
+- Figma: https://www.figma.com/design/54rS3BoUlrxrw74QZ85XGa/FeedTV-Homepage--Prototype-?node-id=4743-5304
 - Content: https://docs.google.com/document/d/18csHw2jwt9aQuPPOa_UnoEIMGgMb9CMVrfb1V9bS-ZY/edit
 
 Desktop appearance is based on the 1440px source designs. Mobile is an adaptive implementation; the separate mobile design was not part of the supplied handoff. The alternative “Our Platform” frame is outside the approved desktop scope.

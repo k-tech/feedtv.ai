@@ -27,16 +27,19 @@
 .product-hero-visual::before{content:'';position:absolute;inset:0 25% 35% 0;border-top-left-radius:76px;background:linear-gradient(145deg,#008682,#00b5ad);z-index:-1}
 .product-hero-visual>img{width:100%;height:auto;object-fit:contain;border-radius:37px}
 
-.testimonial{height:auto;min-height:234px}
+.testimonial{height:auto;min-height:250px}
+.quote-slides{display:grid;width:100%;min-width:0}
+.quote-slide{grid-area:1/1;min-width:0;visibility:hidden;animation:none}
+.quote-slide.is-active{visibility:visible;animation:quote-in .45s ease-in-out}
+.quote-slide[data-slide="1"] blockquote{width:980px;max-width:100%;margin-inline:auto}
 .quote-attribution{flex-direction:row;flex-wrap:wrap;gap:12px}
 .quote-attribution>.quote-logo{flex-shrink:0;max-height:none;object-fit:contain}
 .quote-avatar{display:block;position:relative;overflow:hidden;border-radius:50%;width:38px;height:38px;flex-shrink:0}
 .quote-avatar img{width:100%;height:100%;object-fit:cover}
-.quote-avatar-01 img{position:absolute;width:256%;height:170.67%;left:-99.11%;top:-3.97%;object-fit:fill}
 .quote-attribution>div{text-align:left}
 .quote-attribution p{color:#a2a4a4}
 .quote-dots{flex-shrink:0}
-.homepage [data-name="Trusted by"]{height:auto;min-height:526px}
+.homepage [data-name="Trusted by"]{height:auto;min-height:0}
 .homepage #node-1733_943{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;height:auto}
 .homepage #node-1733_943>[data-name="Hover band"]{display:none}
 .homepage #node-1733_943>div:not([data-name="Hover band"]){width:100%;justify-self:center;max-width:191px;height:60px;transform:none;margin:0}

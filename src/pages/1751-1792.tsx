@@ -15,6 +15,8 @@ const imgGroup10 = "/assets/1751-1792-imgGroup10.svg";
 const imgGroup11 = "/assets/1751-1792-imgGroup11.svg";
 const imgNOkkL8Tif1 = "/assets/1751-1792-imgNOkkL8Tif1.svg";
 const imgGroup12 = "/assets/1751-1792-imgGroup12.svg";
+const imgGroupSamsungEndV5 = "/assets/1751-1792-imgGroupSamsungEndV5.svg";
+const imgGroupVizioEndV5 = "/assets/1751-1792-imgGroupVizioEndV5.svg";
 const imgMark = "/assets/1751-1792-imgMark.svg";
 const imgImgHomeSupplyPath = "/assets/1751-1792-imgImgHomeSupplyPath.png";
 const imgImgHomeSupplyPath1 = "/assets/1751-1792-imgImgHomeSupplyPath1.png";
@@ -127,7 +129,7 @@ function RevealPartners({ className, step = true }: RevealPartnersProps) {
           <div className={`content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px relative ${isStep ? "" : ""}`} id={isStep ? "node-1744_2465" : "node-1744_947"} data-name="Cell · CTV 03">
             <div className={`grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 ${isStep ? "" : ""}`} id={isStep ? "node-1744_2466" : "node-1744_948"} data-name="Group">
               <div className="col-1 h-[23.996px] ml-0 mt-0 relative row-1 w-[65.885px]" id={isStep ? "node-1744_2467" : "node-1744_949"} data-name="Group">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={isStep ? imgGroupSamsungEndV5 : imgGroup2} />
               </div>
               <div className="col-1 h-[23.769px] ml-[70.77px] mt-0 relative row-1 w-[35.681px]" id={isStep ? "node-1744_2472" : "node-1744_954"} data-name="Group">
                 <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup3} />
@@ -142,7 +144,7 @@ function RevealPartners({ className, step = true }: RevealPartnersProps) {
           <div className={`content-stretch flex flex-[1_0_0] h-full items-center justify-center min-w-px relative ${isStep ? "" : ""}`} id={isStep ? "node-1744_2484" : "node-1744_966"} data-name="Cell · CTV 05">
             <div className={`grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 ${isStep ? "" : ""}`} id={isStep ? "node-1744_2485" : "node-1744_967"} data-name="cJhxwX.tif">
               <div className="col-1 h-[31.826px] ml-0 mt-0 relative row-1 w-[102.353px]" id={isStep ? "node-1744_2486" : "node-1744_968"} data-name="Group">
-                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup4} />
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={isStep ? imgGroupVizioEndV5 : imgGroup4} />
               </div>
             </div>
           </div>
@@ -299,7 +301,7 @@ function RevealChallengeVsFeedTv({ className, state = "End" }: RevealChallengeVs
               <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMark} />
             </div>
             <p className={`[word-break:break-word] flex-[1_0_0] font-["Lato:Regular"] leading-[1.6] min-w-px not-italic relative text-[#1d262f] text-[16.5px] ${isStart ? "" : ""}`} id={isStart ? "node-1731_1008" : "node-1731_950"}>
-              Attribution expertise; installs, in-app events and KPIs that matter, tied across your media mix.
+              Attribution expertise; mobile web conversions, installs, in-app events and KPIs that matter, tied across your media mix.
             </p>
           </div>
         </div>
@@ -404,7 +406,7 @@ function RevealLivingRoom({ className, state = "End" }: RevealLivingRoomProps) {
           <span className="leading-[1.72]">{` The screen is bigger. The attention is real and the price is still catching up to the value. The problem is, most of the industry still buys it like a banner ad.`}</span>
         </p>
         <p className={`absolute font-["Lato:Regular"] leading-[1.72] left-[782px] text-[17px] top-[417px] w-[585px] ${isStart ? "" : ""}`} id={isStart ? "node-1731_865" : "node-1731_859"}>
-          FeedTV turns the living room into a performance channel — driving installs, in-app events, and ROAS on the biggest screen in the home, the way you already measure mobile.
+          FeedTV turns the living room into a performance channel — driving mobile web conversions, installs, in-app events, and ROAS on the biggest screen in the home, the way you already measure mobile.
         </p>
       </div>
       {state === "End" && (

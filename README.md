@@ -28,6 +28,21 @@ Open http://127.0.0.1:4173. `npm run check` validates navigation, search, form b
 
 ## Production integration
 
+### Cloudflare Pages
+
+The production Pages project is `feedtv-ai`, with the address https://feedtv-ai.pages.dev/. Its account, project name, and output directory are recorded in `wrangler.jsonc`.
+
+To publish the current checkout after signing into the configured Cloudflare account:
+
+```powershell
+npx --yes wrangler@4.158.0 login
+npm run deploy:cloudflare
+```
+
+The deployment command builds `dist/` and uploads it to the production `main` branch. The generated `_redirects` file supports direct visits and refreshes on application routes. Authentication tokens stay in Wrangler's local login storage and are never committed. The `feedtv.ai` custom domain is not bound by this configuration.
+
+### Forms and launch content
+
 Set `window.FEEDTV_CONTACT_ENDPOINT` in `public/config.js` to an HTTPS endpoint that accepts `{name, email, company, budget, message}` as JSON. The endpoint must validate input, deliver/store the inquiry and return success only once accepted. Until configured, the interface explicitly reports that a message has **not** been sent. The thank-you screen is available at `/thank-you`; successful configured submissions navigate there.
 
 The advertising preview email gate validates an address and unlocks the sample for the browser session. It does not transmit or permanently store the address. The externally hosted CTV previewer is linked from the original design; its behavior is owned by that application. A production email capture endpoint still needs to be supplied.

@@ -1,6 +1,12 @@
 {
   "name": "feedtv-ai",
-  "pages_build_output_dir": "./dist",
+  "account_id": "a25f9e3be7ce1f85df8b03c69cdd722a",
   "compatibility_date": "2026-11-07",
-  "send_metrics": false
+  "workers_dev": true,
+  "preview_urls": false,
+  "send_metrics": false,
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
 }

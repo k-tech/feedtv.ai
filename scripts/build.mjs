@@ -12,5 +12,6 @@ await fs.copyFile(root+'/src/style.css',root+'/dist/style.css');
 await fs.copyFile(root+'/src/responsive.css',root+'/dist/responsive.css');
 await fs.copyFile(root+'/src/index.html',root+'/dist/index.html');
 await build({entryPoints:[root+'/src/app.tsx'],bundle:true,minify:true,format:'esm',jsx:'automatic',outfile:root+'/dist/app.js',define:{'process.env.NODE_ENV':'"production"'},logLevel:'info'});
-await fs.writeFile(root+'/dist/_redirects','/* /index.html 200\n');
+if(process.argv.includes('--cloudflare'))await fs.rm(root+'/dist/_redirects',{force:true});
+else await fs.writeFile(root+'/dist/_redirects','/* /index.html 200\n');
 console.log(JSON.stringify({pages:pages.length,cssRules:css.split('\n').length,unknown}));

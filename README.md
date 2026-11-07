@@ -28,19 +28,18 @@ Open http://127.0.0.1:4173. `npm run check` validates navigation, search, form b
 
 ## Production integration
 
-### Cloudflare Pages
+### Cloudflare Workers
 
-The production Pages project is `feedtv-ai`, with the address https://feedtv-ai.pages.dev/. Its project name and output directory are recorded in `wrangler.jsonc`.
+The production Worker is `feedtv-ai`, with the address https://feedtv-ai.leoliu-dev.workers.dev/. Its account, project name, and static asset directory are recorded in `wrangler.jsonc`. The previous Pages project is retained; its address is not the primary production URL.
 
 To publish the current checkout after signing into the configured Cloudflare account:
 
 ```powershell
 npx --yes wrangler@4.158.0 login
-$env:CLOUDFLARE_ACCOUNT_ID = "a25f9e3be7ce1f85df8b03c69cdd722a"
 npm run deploy:cloudflare
 ```
 
-The deployment command builds `dist/` and uploads it to the production `main` branch. The generated `_redirects` file supports direct visits and refreshes on application routes. Authentication tokens stay in Wrangler's local login storage and are never committed. The `feedtv.ai` custom domain is not bound by this configuration.
+The deployment command builds `dist/` for Workers Static Assets and publishes it to the configured Worker. Cloudflare's `single-page-application` fallback supports direct visits and refreshes on application routes. This build omits the generic `_redirects` rule, which Workers rejects as an infinite loop. The default `npm run build` retains that file for the existing Sites preview. Authentication tokens stay in Wrangler's local login storage and are never committed. The `feedtv.ai` custom domain is not bound by this configuration; its DNS is currently hosted in AWS Route 53.
 
 ### Forms and launch content
 

@@ -105,6 +105,19 @@
 .page-main [data-name="How FeedTV Stream Works"]>[data-name="Row"]:last-child{grid-template-columns:repeat(2,minmax(0,1fr))}
 .page-main [data-name="How FeedTV Stream Works"]>[data-name="Row"]>div{width:100%;height:auto;display:flex}
 .page-main [data-name="How FeedTV Stream Works"]>[data-name="Row"]>div>[data-name="Card"]{position:relative;inset:auto;width:100%;height:auto;min-height:264px;flex:1}
+.page-main [data-name="How FeedTV Stream Works"]>[data-name="Row"]:last-child>div{min-height:0}
+.page-main [data-name="How FeedTV Stream Works"]>[data-name="Row"]:last-child>div>[data-name="Card"]{min-height:214px}
+
+/* Both feature sections keep each index next to its icon: 12px + 1px + 12px. */
+.page-main [data-name="Card head"]>[data-name="spacer"]{flex:0 0 1px;min-width:1px;width:1px}
+.page-main [data-name="Card head"]>div:last-child{flex:0 0 auto;width:auto;min-width:0;height:auto;white-space:nowrap}
+.page-main [data-name="Card"]:has(>[data-name="Card head"]),.page-main [data-name="Tiers"] [data-name="Card"]{transition:transform .22s ease-out,box-shadow .22s ease-out;transform-origin:center}
+@media(hover:hover) and (pointer:fine){
+ .page-main [data-name="Card"]:has(>[data-name="Card head"]):hover,.page-main [data-name="Tiers"] [data-name="Card"]:hover{transform:scale(1.05);box-shadow:0 12px 32px rgba(28,38,46,.14);z-index:2}
+}
+@media(prefers-reduced-motion:reduce){
+ .page-main [data-name="Card"]:has(>[data-name="Card head"]):hover,.page-main [data-name="Tiers"] [data-name="Card"]:hover{transform:none}
+}
 
 .page-main [data-name="Articles"]>[data-name="Row"],.page-main [data-name="Case study grid"]>[data-name="Row"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;overflow:visible}
 .page-main [data-name^="Article ·"],.page-main [data-name^="Case ·"]{min-width:0;width:100%;height:auto;min-height:432px}

@@ -1,6 +1,5 @@
 {
   "name": "feedtv-ai",
-  "account_id": "a25f9e3be7ce1f85df8b03c69cdd722a",
   "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-11-07",
   "send_metrics": false

@@ -30,12 +30,13 @@ Open http://127.0.0.1:4173. `npm run check` validates navigation, search, form b
 
 ### Cloudflare Pages
 
-The production Pages project is `feedtv-ai`, with the address https://feedtv-ai.pages.dev/. Its account, project name, and output directory are recorded in `wrangler.jsonc`.
+The production Pages project is `feedtv-ai`, with the address https://feedtv-ai.pages.dev/. Its project name and output directory are recorded in `wrangler.jsonc`.
 
 To publish the current checkout after signing into the configured Cloudflare account:
 
 ```powershell
 npx --yes wrangler@4.158.0 login
+$env:CLOUDFLARE_ACCOUNT_ID = "a25f9e3be7ce1f85df8b03c69cdd722a"
 npm run deploy:cloudflare
 ```
 

@@ -10,6 +10,8 @@
 .page-main [data-name="Footer"] [data-name="Columns"]>div,.footer-columns>div{min-width:0;width:100%;max-width:100%;overflow:visible}
 .page-main [data-name="Footer"] [data-name="Columns"] p{white-space:normal;max-width:100%}
 .page-main [data-name="Footer"] [data-name="Brand"],.footer-brand{width:100%;min-width:0}
+.page-main #node-1871_2674{min-height:880px}
+.page-main [data-name="People"]>[data-name^="Person ·"]{min-height:481px}
 
 /* Keep the entire supplied hero image inside the first-screen scene. */
 .homepage .home-hero{position:relative;width:100%;height:calc(max(620px,min(100svh,100vw * 1115 / 1920)) - var(--nav-height));background:linear-gradient(180deg,#eaf8fa 0%,#e8f7fa 5%,#e4f6f9 10%,#dcf4f8 15%,#d4f1f6 20%,#cbeef4 25%,#c3ebf1 30%,#bce8f0 35%,#b5e6ee 40%,#aee4ee 45%,#a8e2ec 50%,#a4e1ec 55%,#a1e0ea 60%,#9fdfea 65%,#9edeea 70%,#9ddde8 75%,#9bdde8 80%,#98dce8 85%,#92dae6 90%,#87d5e1 95%,#57bec9 100%);isolation:isolate}
@@ -154,6 +156,7 @@
 }
 @media(max-width:1100px){
  :root{--nav-height:76px;--gutter:24px}
+ .page-main #node-1871_2674{min-height:0}
  .site-nav nav.mobile-open{max-height:calc(100dvh - var(--nav-height));overflow-y:auto;overscroll-behavior:contain}
  .page-main>div{padding-top:var(--nav-height)}
  .homepage .home-hero{height:auto;min-height:0;display:flex;flex-direction:column}

@@ -40,3 +40,5 @@ Legal links show a launch-pending notice because approved legal copy was not sup
 - Content: https://docs.google.com/document/d/18csHw2jwt9aQuPPOa_UnoEIMGgMb9CMVrfb1V9bS-ZY/edit
 
 Desktop appearance is based on the 1440px source designs. Mobile is an adaptive implementation; the separate mobile design was not part of the supplied handoff. The alternative “Our Platform” frame is outside the approved desktop scope.
+
+The founding team uses the exact v5 final-state biographies in every reveal state. Biography text keeps the requested left alignment; cards use a 481px minimum height and grow with their content on smaller screens.

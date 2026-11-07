@@ -275,85 +275,40 @@ function Reveal02OemHowFeedTvWorks({ className, state = "End" }: Reveal02OemHowF
   );
 }
 
-type HoverLift03OpenMarketplaceRemnantProps = {
+type SupplyTierCardProps = {
   className?: string;
-  state?: "Default" | "Hover";
+  kind: "direct" | "private" | "open";
+  title: string;
+  description: string;
+  icon: string;
 };
 
-function HoverLift03OpenMarketplaceRemnant({ className, state = "Default" }: HoverLift03OpenMarketplaceRemnantProps) {
-  const isHover = state === "Hover";
+function SupplyTierCard({className = "", kind, title, description, icon}: SupplyTierCardProps) {
   return (
-    <div className={className || "h-[238px] relative w-[385px]"} id={isHover ? "node-1852_2020" : "node-1852_2019"}>
-      <div className={`absolute bg-white border-[#e5e7e9] border-solid overflow-clip ${isHover ? "border-[1.05px] h-[249.9px] left-[-9.63px] rounded-[25.2px] shadow-[0px_12px_32px_0px_rgba(28,38,46,0.14)] top-[-5.95px] w-[404.25px]" : "border h-[238px] left-0 rounded-[24px] top-0 w-[385px]"}`} id={isHover ? "node-1852_2005" : "node-1668_2971"} data-name="Card">
-        <div className={`absolute bg-[rgba(238,105,105,0.09)] ${isHover ? "left-[223.65px] rounded-[45.102px] size-[141.75px] top-[54.6px]" : "left-[213px] rounded-[42.955px] size-[135px] top-[52px]"}`} id={isHover ? "node-1852_2006" : "node-1668_2973"} data-name="Medallion">
-          <div className={`absolute ${isHover ? "left-[32.22px] size-[77.318px] top-[32.22px]" : "left-[30.68px] size-[73.636px] top-[30.68px]"}`} id={isHover ? "node-1852_2007" : "node-1668_2974"} data-name="icon">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={isHover ? imgIcon9 : imgIcon8} />
-          </div>
+    <div className={`supply-tier supply-tier--${kind} ${className}`}>
+      <div className="supply-tier-card" data-name="Card">
+        <div className="supply-tier-copy">
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
-        <p className={`[word-break:break-word] absolute font-["Lato:Bold"] leading-[1.3] not-italic text-[#1d262f] ${isHover ? "left-[31.5px] text-[21px] top-[46.2px] tracking-[-0.315px] w-[174.3px]" : "left-[30px] text-[20px] top-[44px] tracking-[-0.3px] w-[166px]"}`} id={isHover ? "node-1852_2017" : "node-1668_2986"}>
-          No remnant ads (open marketplace)
-        </p>
-        <p className={`[word-break:break-word] absolute font-["Lato:Light"] leading-[1.65] not-italic text-[#4c5864] ${isHover ? "left-[31.5px] text-[16.275px] top-[134.4px] w-[158.55px]" : "left-[30px] text-[15.5px] top-[128px] w-[151px]"}`} id={isHover ? "node-1852_2018" : "node-1668_2987"}>
-          Where everyone else is buying. FeedTV does not bid here.
-        </p>
+        <div className="supply-tier-medallion" data-name="Medallion">
+          <img src={icon} alt="" width="73.636" height="73.636" />
+        </div>
       </div>
     </div>
   );
 }
 
-type HoverLift02PrivateMarketplaceProps = {
-  className?: string;
-  state?: "Default" | "Hover";
-};
-
-function HoverLift02PrivateMarketplace({ className, state = "Default" }: HoverLift02PrivateMarketplaceProps) {
-  const isHover = state === "Hover";
-  return (
-    <div className={className || "h-[238px] relative w-[385px]"} id={isHover ? "node-1852_1993" : "node-1852_1992"}>
-      <div className={`absolute bg-white border-[#e5e7e9] border-solid overflow-clip ${isHover ? "border-[1.05px] h-[249.9px] left-[-9.63px] rounded-[25.2px] shadow-[0px_12px_32px_0px_rgba(28,38,46,0.14)] top-[-5.95px] w-[404.25px]" : "border h-[238px] left-0 rounded-[24px] top-0 w-[385px]"}`} id={isHover ? "node-1852_1985" : "node-1668_2961"} data-name="Card">
-        <div className={`absolute bg-[rgba(0,181,173,0.09)] ${isHover ? "left-[223.65px] rounded-[45.102px] size-[141.75px] top-[54.6px]" : "left-[213px] rounded-[42.955px] size-[135px] top-[52px]"}`} id={isHover ? "node-1852_1986" : "node-1668_2963"} data-name="Medallion">
-          <div className={`absolute ${isHover ? "left-[32.22px] size-[77.318px] top-[32.22px]" : "left-[30.68px] size-[73.636px] top-[30.68px]"}`} id={isHover ? "node-1852_1987" : "node-1668_2964"} data-name="icon">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" src={isHover ? imgIcon11 : imgIcon10} />
-          </div>
-        </div>
-        <p className={`[word-break:break-word] absolute font-["Lato:Bold"] leading-[1.3] not-italic text-[#1d262f] ${isHover ? "left-[31.5px] text-[21px] top-[46.2px] tracking-[-0.315px] w-[158.55px]" : "left-[30px] text-[20px] top-[44px] tracking-[-0.3px] w-[151px]"}`} id={isHover ? "node-1852_1990" : "node-1668_2969"}>
-          Private marketplace
-        </p>
-        <p className={`[word-break:break-word] absolute font-["Lato:Light"] leading-[1.65] not-italic text-[#4c5864] ${isHover ? "left-[31.5px] text-[16.275px] top-[120.75px] w-[158.55px]" : "left-[30px] text-[15.5px] top-[115px] w-[151px]"}`} id={isHover ? "node-1852_1991" : "node-1668_2970"}>
-          First right of refusal on everything direct OEMs don’t fill.
-        </p>
-      </div>
-    </div>
-  );
+function HoverLift03OpenMarketplaceRemnant({className}: {className?: string}) {
+  return <SupplyTierCard className={className} kind="open" title="No remnant ads (open marketplace)" description="Where everyone else is buying. FeedTV does not bid here." icon={imgIcon8} />;
 }
 
-type HoverLift01DirectDealsProgrammaticGuaranteedProps = {
-  className?: string;
-  state?: "Default" | "Hover";
-};
+function HoverLift02PrivateMarketplace({className}: {className?: string}) {
+  return <SupplyTierCard className={className} kind="private" title="Private marketplace" description="First right of refusal on everything direct OEMs don’t fill." icon={imgIcon10} />;
+}
 
-function HoverLift01DirectDealsProgrammaticGuaranteed({ className, state = "Default" }: HoverLift01DirectDealsProgrammaticGuaranteedProps) {
-  const isHover = state === "Hover";
-  return (
-    <div className={className || "h-[238px] relative w-[385px]"} id={isHover ? "node-1852_1970" : "node-1852_1969"}>
-      <div className={`absolute bg-white border-[#e5e7e9] border-solid overflow-clip ${isHover ? "border-[1.05px] h-[249.9px] left-[-9.63px] rounded-[25.2px] shadow-[0px_12px_32px_0px_rgba(28,38,46,0.14)] top-[-5.95px] w-[404.25px]" : "border h-[238px] left-0 rounded-[24px] top-0 w-[385px]"}`} id={isHover ? "node-1852_1959" : "node-1668_2948"} data-name="Card">
-        <div className={`-translate-x-1/2 -translate-y-1/2 absolute bg-[rgba(0,181,173,0.09)] ${isHover ? "left-[calc(50%+93.45px)] rounded-[45.102px] size-[141.75px] top-[calc(50%+1.58px)]" : "left-[calc(50%+89px)] rounded-[42.955px] size-[135px] top-[calc(50%+1.5px)]"}`} id={isHover ? "node-1852_1960" : "node-1668_2950"} data-name="Medallion">
-          <div className={`absolute ${isHover ? "left-[32.22px] size-[77.318px] top-[32.22px]" : "left-[30.68px] size-[73.636px] top-[30.68px]"}`} id={isHover ? "node-1852_1961" : "node-1668_2951"} data-name="icon">
-            <div className={`absolute left-0 top-0 ${isHover ? "size-[77.318px]" : "size-[73.636px]"}`} id={isHover ? "node-2417_7580" : "node-2417_7574"} data-name="glyph · connected-tv (symmetric)">
-              <img alt="" className="absolute block inset-0 max-w-none size-full" src={isHover ? imgGlyphConnectedTvSymmetric1 : imgGlyphConnectedTvSymmetric} />
-            </div>
-          </div>
-        </div>
-        <div className={`[word-break:break-word] absolute font-["Lato:Bold"] leading-[0] not-italic text-[#1d262f] ${isHover ? "left-[31.5px] text-[21px] top-[47.25px] tracking-[-0.315px] w-[116.55px]" : "left-[30px] text-[20px] top-[45px] tracking-[-0.3px] w-[111px]"}`} id={isHover ? "node-1852_1967" : "node-1668_2959"}>
-          <p className="leading-[1.3] mb-0">Direct deals</p>
-          <p className="leading-[1.3]">guaranteed</p>
-        </div>
-        <p className={`[word-break:break-word] absolute font-["Lato:Light"] leading-[1.65] not-italic text-[#4c5864] ${isHover ? "left-[31.5px] text-[16.275px] top-[121.8px] w-[158.55px]" : "left-[30px] text-[15.5px] top-[116px] w-[151px]"}`} id={isHover ? "node-1852_1968" : "node-1668_2960"}>
-          Straight with the OEM at rate card, home screen and native.
-        </p>
-      </div>
-    </div>
-  );
+function HoverLift01DirectDealsProgrammaticGuaranteed({className}: {className?: string}) {
+  return <SupplyTierCard className={className} kind="direct" title="Direct deals guaranteed" description="Straight with the OEM at rate card, home screen and native." icon={imgGlyphConnectedTvSymmetric} />;
 }
 
 type Reveal02OemSupplyPathProps = {
